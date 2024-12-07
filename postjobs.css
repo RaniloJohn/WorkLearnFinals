@@ -1,0 +1,422 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Garet', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.logo img {
+    max-width: 10%;
+    max-height: 10%;
+    position: absolute;
+    top: -15px;
+    left: 200px;
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect */
+    z-index: 11;
+    margin-left: -170px;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.nav-links {
+    display: flex; /* Aligns links horizontally */
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 15px; /* Spacing between links */
+    position: absolute;
+    left: 775px;
+}
+
+.nav-links a {
+    display: inline-block; /* Required for transform to affect the text */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #008000; /* Green color */
+    font-weight: bold;
+    font-size: 16px; /* Optional for better visibility */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth scaling and color change */
+}
+
+.nav-links a:hover {
+    transform: scale(1.15); /* Slowly grows on hover */
+    color: #004d00; /* Darker green on hover */
+}
+
+.header-icons {
+    display: flex; /* Align icons horizontally */
+    align-items: center; /* Vertically align icons */
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 40px; /* Space between icons */
+    padding: 10px 20px; /* Padding around the container */
+    background-color: white; /* Light background color */
+}
+
+.header-icons i {
+    font-size: 22px; /* Icon size */
+    color: #00924c; /* Icon color */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Post Job Section */
+.post-job-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-left: 100px;
+    padding-left: 20px;
+    padding-right: 35px;
+}
+
+.post-job-section h1 {
+    font-size: 20px;
+}
+
+.post-job-section .form-group {
+    margin-bottom: 15px;
+}
+
+.post-job-section .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.post-job-section .form-group input,
+.post-job-section .form-group select,
+.post-job-section .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.post-job-section .submit-button {
+    background-color: #00924c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.post-job-section .submit-button:hover {
+    background-color: #007a3c;
+}
+
+/* Job Listings Section */
+.job-listings-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: -20px;
+}
+
+.job-listings-section h1 {
+    font-size: 20px;
+}
+
+.job-listings-section #jobListings {
+    margin-top: 20px;
+}
+
+.job-card {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 30px 25px; /* Adjust padding for a more compact look */
+    border-radius: 8px;
+    background: #f9f9f9;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: auto;
+    width: 100%; /* Set a fixed width for the card */
+     height: auto;/* Height will adjust based on content */
+     overflow: auto;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.job-card p {
+    margin: 5px 0;
+    color: #555;
+    overflow: auto;
+}
+
+.job-card strong {
+    color: #000;
+}
+
+.job-actions {
+    margin-top: 10px;
+    text-align: center; /* Center the delete button */
+}
+
+.job-card .job-details {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.job-card .job-actions {
+    text-align: right;
+}
+
+.job-actions button {
+    background-color: #00924c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.job-actions button:hover {
+    background-color: #007a3c;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    min-height: 300px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 200px;
+    margin-left: -30px;
+    margin-right: 50px; /* Adjust this value for desired spacing */
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.3rem;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    color: #f9a826;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust width of the icon container */
+    height: 40px; /* Adjust height of the icon container */
+    background-color: #2b9348;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f9a826;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #0a4b1a;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+.job-actions .delete-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .job-actions .delete-button:hover {
+    background-color: #cc0000;
+  }
+  .job-listings-box {
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Internal padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space above the box */
+    overflow: auto;
+  }
+  
+  .job-listings-section h1 {
+    text-align: center; /* Center the title */
+    font-size: 24px; /* Slightly larger font */
+    color: #00924c; /* Match the theme */
+  }
+  
+  #jobListings {
+    display: flex;
+    flex-direction: column; /* Stack job cards vertically */
+    gap: 20px; /* Space between job cards */
+  }
+  .dropdown-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between dropdown and logo */
+  }
+  
+  .company-logo-img {
+    width: 50px; /* Adjust size */
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.job-actions {
+    margin-top: 10px;
+    text-align: right;
+}
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make delete button span the width of the card */
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  
+  .post-job-section,
+  .job-listings-section {
+    width: 70%; /* Left section will take 70% of the width */
+  }
+  
+  .school-job-box {
+    width: 15%; /* Right section (school box) will take 25% of the width */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .school-job-box h2 {
+    font-size: 22px;
+    color: #00924c;
+  }
+  
+  .school-job-box ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .school-job-box ul li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .school-job-box ul li span {
+    font-weight: bold;
+  }
+  
+  .school-job-box ul li a {
+    text-decoration: none;
+    color: #00924c;
+  }
+  
+  .school-job-box ul li a:hover {
+    text-decoration: underline;
+  }
+  

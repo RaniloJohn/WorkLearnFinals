@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Finder</title>
+  <link rel="stylesheet" href="findjobs.css">
+  <!-- Location Icon -->
+   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+  
+  
+  
+<header class="header">
+  <div class="logo">
+    <img src="images/WL (1).png" alt="Logo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </div>
+  <nav class="nav-links">
+      <a href="HOMEPAGE ACCOUNT.html">Home</a>
+      <a href="ABOUT US ACCOUNT.html">About Us</a>
+      <a href="FIND JOBS.html">Find Jobs</a>
+  </nav>
+  <header>
+    <div class="header-icons">
+      <span class="icon-link"><i class="fa-solid fa-envelope"></i></span>
+      <span class="icon-link"><i class="fa-solid fa-bell"></i></span>
+      <a href="profile.html"
+        class="icon-link">
+        <i class="fa-solid fa-user"></i>
+        </a>
+       </div>
+    </div>
+  </header>
+</header>
+<body>
+  <div class="container">
+</body>
+</html>
+
+
+  <!-- Main Content -->
+  <div class="content">
+   
+
+
+    <aside class="filters">
+      <!-- Header -->
+      <div class="filters-header">
+          <h2>Filters</h2>
+          <button class="reset-filter">Reset Filter</button>
+      </div>
+      <div class="line-filter"></div>
+      <!-- Job Type Section -->
+      <div class="filter-group filter-job-type">
+          <h3>Job Type</h3>
+          <div class="two-column">
+              <label><input type="checkbox"> Full-Time</label>
+              <label><input type="checkbox"> Part-Time</label>
+              <label><input type="checkbox"> Freelance</label>
+              <label><input type="checkbox"> Volunteer</label>
+              <label><input type="checkbox"> Internship</label>
+          </div>
+      </div>
+      <div class="line-filter"></div>
+     
+      <!-- Location Section -->
+      <div class="filter-group filter-location">
+          <h3>Location</h3>
+          <input type="text" placeholder="Search Location">
+      </div>
+      
+      <div class="line-filter"></div>
+      <!-- Experience Level Section -->
+      <div class="filter-group filter-experience-level">
+          <h3>Experience Level</h3>
+          <div class="two-column">
+              <label><input type="checkbox"> Early Level</label>
+              <label><input type="checkbox"> Intermediate</label>
+              <label><input type="checkbox"> Senior Level</label>
+              <label><input type="checkbox"> Managerial</label>
+              <label><input type="checkbox"> Expert Level</label>
+          </div>
+      </div>
+      <div class="line-filter"></div>
+  
+      <!-- Range Salary Section -->
+      <div class="filter-group filter-range-salary">
+          <h3>Range Salary</h3>
+          <div class="salary-range">
+              <input type="text" value="$1,000">
+              <input type="text" value="$10,000">
+          </div>
+          <input type="range" min="1000" max="10000" step="100">
+      </div>
+      <div class="line-filter"></div>
+  
+      <!-- On Location Section -->
+      <div class="filter-group filter-on-location">
+          <h3>Work Type</h3>
+          <div class="two-column">
+              <label><input type="checkbox"> Office</label>
+              <label><input type="checkbox"> Remote</label>
+              <label><input type="checkbox"> WFA</label>
+          </div>
+      </div>
+  </aside>
+  
+    
+    <!-- Job Listings Section -->
+    
+
+    <section class="job-listings">
+      <h2>Available Jobs</h2>
+      <title>Search Bar</title>
+ 
+ 
+      <div class="search-bar">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search for jobs..." class="search-input">
+      </div>
+  
+    <div>
+    </body>
+     <div class="job-card" 
+     data-company="Pinterest" 
+     data-title="Senior UI Designer" 
+     data-location="Liverpool, UK" 
+     data-salary="$4,000/month" 
+     data-type="Full-Time, Work from Office">
+    <div class="job-header">
+        <img src="company-logo.png" alt="Pinterest Logo">
+        <h3>Senior UI Designer</h3>
+    </div>
+
+    <!-- Company name placed directly below job title -->
+    <p class="company">Pinterest</p>
+
+    <!-- Job description placed above the job details -->
+    <p class="description">
+        You will play a crucial role in creating engaging and visually appealing user interfaces for our job posting platform. Your primary responsibility will be to design and optimize the user experience of our job posting interface, ensuring a seamless, intuitive, and visually attractive experience for users.
+    </p>
+    <div class="line-1"></div>
+
+    <div class="job-details">
+      <span class="job-icon"><i class="fa fa-map-marker-alt"></i></span>New York, USA
+    
+        <span class="job-icon"><i class="fa fa-briefcase"></i></span>Full-Time
+        
+        <span class="job-icon"><i class="fa fa-dollar-sign"></i></span>
+        $50,000/year
+        <span class="job-icon"><i class="fa-solid fa-building"></i></span>Remote</p>
+    </div>
+</div>
+
+        
+        <!-- Removed job description part below -->
+        <!-- <p class="description">Job description here...</p> -->
+    </div>
+    
+    
+    <div class="job-card" 
+    data-company="Spotify" 
+    data-title="UI Designer" 
+    data-location="Manchester, USA" 
+    data-salary="$3,000/month" 
+    data-type="Full-Time, Work from Office">
+   <div class="job-header">
+       <img src="company-logo.png" alt="Spotify">
+       <h3>UI Designer</h3>
+   </div>
+
+   <!-- Company name placed directly below job title -->
+   <p class="company">Spotify</p>
+
+   <!-- Job description placed above the job details -->
+   <p class="description">
+    We are currently growing our community of highly qualified UI Designers who will help us create visually compelling designs that resonate with our audience. Your role will involve working on designing intuitive user interfaces for both our app and web platforms.
+   </p>
+   <div class="line-1"></div>
+
+   <div class="job-details">
+    <span class="job-icon"><i class="fa fa-map-marker-alt"></i></span> Manchester, USA
+    <span class="job-icon"><i class="fa fa-briefcase"></i></span>Full-Time, Work from Office
+    <span class="job-icon"><i class="fa fa-dollar-sign"></i></span>$3,000/month
+    <span class="job-icon"><i class="fa-solid fa-building"></i></span>WFA</p>
+   </div>
+</div>
+
+    
+
+      <div class="job-card" 
+      data-company="Mailchimp" 
+      data-title="Backend Programmer" 
+      data-location="Manila, Philippines" 
+      data-salary="$2,000/month" 
+      data-type= "Freelance">
+     <div class="job-header">
+         <img src="images/mailchimp_icon_146054.png" alt="Mailchimp">
+         <h3>Backend Programmer</h3>
+     </div>
+  
+     <!-- Company name placed directly below job title -->
+     <p class="company">Mailchimp</p>
+  
+     <!-- Job description placed above the job details -->
+     <p class="description">
+      Join our creative team to help design user-friendly interfaces for our email marketing services. We are looking for a designer who is passionate about creating visually appealing, functional designs that enhance the user experience.
+      <div class="line-1"></div>
+      <div class="job-details">
+        <span class="job-icon"><i class="fa fa-map-marker-alt"></i></span> Manila, Philippines</p>
+        <span class="job-icon"><i class="fa fa-briefcase"></i></span>Freelance</p>
+        <span class="job-icon"><i class="fa fa-dollar-sign"></i></span>$2,000/month</p>
+        <span class="job-icon"><i class="fa-solid fa-building"></i></span>Office</p>
+    </div>
+ </div>
+
+
+      <div class="job-card"
+      data-company="Google" 
+      data-title="Frontend Designer" 
+      data-location="Singapore" 
+      data-salary="$10,000/month" 
+      data-type="Full-time, Remote">
+     <div class="job-header">
+         <img src="images/GoogleChrome.png" alt="Google">
+         <h3>Frontend Designer</h3>
+     </div>
+  
+     <!-- Company name placed directly below job title -->
+     <p class="company">Google</p>
+  
+     <!-- Job description placed above the job details -->
+     <p class="description">
+      Join our creative team to help design user-friendly interfaces for our email marketing services. We are looking for a designer who is passionate about creating visually appealing, functional designs that enhance the user experience.
+      <div class="line-1"></div>
+      <div class="job-details">
+        <span class="job-icon"><i class="fa fa-map-marker-alt"></i></span>Singapore</p>
+        <span class="job-icon"><i class="fa fa-briefcase"></i></span>Full-Time, Remote</p>
+        <span class="job-icon"><i class="fa fa-dollar-sign"></i></span>$10,000/month</p>
+        <span class="job-icon"><i class="fa-solid fa-building"></i></span>Office</p>
+        
+    </div>
+ </div>
+
+
+
+    <div class="job-card"
+    data-company="Amazon" 
+    data-title="Marketing Analyst" 
+    data-location="Seattle, USA" 
+    data-salary="$10,000/month" 
+    data-type="Part-Time, Hybrid">
+   <div class="job-header">
+       <img src="images/Amazon.png" alt="Google">
+       <h3>Marketing Analyst</h3>
+   </div>
+
+   <!-- Company name placed directly below job title -->
+   <p class="company">Amazon</p>
+
+   <!-- Job description placed above the job details -->
+   <p class="description">
+    Join our creative team to help design user-friendly interfaces for our email marketing services. We are looking for a designer who is passionate about creating visually appealing, functional designs that enhance the user experience.
+    <div class="line-1"></div>
+    <div class="job-details">
+      <span class="job-icon"><i class="fa fa-map-marker-alt"></i></span>Seattle, USA</p>
+      <span class="job-icon"><i class="fa fa-briefcase"></i></span>Part-Time, Hybrid</p>
+      <span class="job-icon"><i class="fa fa-dollar-sign"></i></span>$10,000/month</p>
+      <span class="job-icon"><i class="fa-solid fa-building"></i></span>Office</p>
+  </div>
+</div>
+
+
+
+    
+   <!-- Job Details Section -->
+<!-- Job Details Section -->
+<section class="jobdetails hidden">
+  <div class="job-details-banner">
+    <img id="job-banner-img" src="" alt="Banner Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px 8px 0 0;">
+  </div>
+
+  <!-- Company Section: Apply .job-company class here -->
+  <div class="job-company">
+    <div class="company-image">
+      <img id="job-company-img" alt="Company Logo" style="width: 80px; height: auto; margin-bottom: 10px;">
+      <h2 id="job-title">Select a job to view details</h2>
+      <p id="job-company"></p>
+    </div>
+  </div>
+
+  <!-- Job Details Section -->
+  <div class="job-details">
+    <div class="tabs-container">
+      <ul class="tabs">
+        <li class="tab" id="tab-details">Details</li>
+        <li class="tab" id="tab-maps">Maps</li>
+        <li class="tab" id="tab-about">About</li>
+        <li class="tab" id="tab-jobs">Jobs</li>
+      </ul>
+      <div class="tab-indicator"></div>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <!-- Details Tab Content -->
+      <div class="tab-pane" id="content-details">
+        <p><strong>Location:</strong> <span id="job-location"></span></p>
+        <p><strong>Salary:</strong> <span id="job-salary"></span></p>
+        <p><strong>Type:</strong> <span id="job-type"></span></p>
+    
+      </div>
+
+      <!-- Maps Tab Content -->
+      <div class="tab-pane" id="content-maps">
+        <iframe id="map-iframe" loading="lazy"></iframe> <!-- Google Map iframe -->
+      </div>
+
+      <!-- Other Tab Contents -->
+      <div class="tab-pane" id="content-about">
+        <p id="content-description">Content for About Company</p>
+      </div>
+      <div class="tab-pane" id="content-jobs">
+        <p id="job-description">Job description will appear here.</p>
+      </div>
+    </div>
+
+    <button class="apply-now">Apply Now</button>
+  </div>
+</section>
+</div>
+ 
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/Footer WL.png" alt="WL Logo">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Job Categories</h3>
+        <ul>
+          <li><a href="FIND JOBS.html">Job Search</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="FIND JOBS.html">Recommended Jobs</a></li>
+          <li><a href="post-job.html">Job Applications</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Employers</h3>
+        <ul>
+          <li><a href="REGISTER.html">Register for Free</a></li>
+          <li><a href="FIND JOBS.html">Job Search</a></li>
+          <li><a href="#">Products & Prices</a></li>
+          <li><a href="#">Marketing Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><img src="images/Footer IG.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/Footer Fb.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="images/Footer X.png" alt="Twitter"></a></li>
+          <li><a href="#"><img src="images/Your paragraph text (10).png" alt="Email"></a></li>
+        </ul>
+        <div class="contact-info">
+          <p>+63 2868 9200 | 180011101060</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 WorkLearn. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<script src="findjobs.js"></script>
+</body>
+</html>
+

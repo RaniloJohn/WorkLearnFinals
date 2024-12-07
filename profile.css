@@ -1,0 +1,740 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'League Spartan', sans-serif;
+  }
+  body {
+    font-family: 'Garet', sans-serif;
+    color: #333;
+    background-color: #fcfcfc;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  /*header*/
+  .header {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    height: 60px;
+    overflow: hidden;
+  
+    
+   
+}
+
+.logo img {
+    max-width: 10%;
+    max-height: 10%;
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect */
+    z-index:11;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.nav-links {
+
+    display: flex; /* Aligns links horizontally */
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 15px; /* Spacing between links */
+    position:absolute;
+    left: 600px;
+}
+
+.nav-links a {
+    display: inline-block; /* Required for transform to affect the text */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #008000; /* Green color */
+    font-weight: bold;
+    font-size: 16px; /* Optional for better visibility */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth scaling and color change */
+    
+}
+
+.nav-links a:hover {
+    transform: scale(1.15); /* Slowly grows on hover */
+    color: #004d00; /* Darker green on hover */
+}
+
+
+
+/* Styling for the Header Icons Container */
+.header-icons {
+  display: flex; /* Align icons horizontally */
+  align-items: center; /* Vertically align icons */
+  justify-content: flex-end; /* Align icons to the right */
+  gap: 40px; /* Space between icons */
+  padding: 10px 20px; /* Padding around the container */
+  background-color:white; /* Light background color */
+}
+
+/* Styling for Each Icon */
+.header-icons i {
+  font-size: 22px; /* Icon size */
+  color: #00924c;; /* Icon color */
+  cursor: pointer; /* Add pointer cursor on hover */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+
+}
+
+/* Hover Effect for Icons */
+.header-icons i:hover {
+  color: green; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+  
+  /* Sidebar styles */
+.sidebar {
+  width: 250px;
+  height: 110vh;  /* Full height of the viewport */
+  background-color: #ffffff; /* White background */
+  margin-top: -80px;
+  padding: 20px;
+  position: relative; /* Keeps it in normal document flow */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  overflow-y: auto; /* Allows vertical scrolling if needed */
+}
+
+.sidebar .logo {
+  font-size: 30px;
+  font-weight: bold;
+position:absolute;
+left: 35px;
+top: 43px;
+
+  color: #00924c;
+  font-family: 'League Spartan', sans-serif;
+}
+.sidebar .whole-dashboard{
+  margin-top: 70px;
+  
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+  
+
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333; /* Dark text color for contrast */
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+ 
+}
+
+/* Hover effect for links */
+.sidebar nav ul li a:hover {
+  background-color: #f1f1f1; /* Light grey background on hover */
+  color: #007bff; /* Blue text color for hover */
+  box-shadow: 0px 2px 4px rgba(0, 123, 255, 0.2); /* subtle shadow on hover */
+  transform: translateX(5px); /* subtle slide to the right */
+}
+
+/* Active link styles */
+.sidebar nav ul li a.active {
+  background-color: #007bff; /* Blue background for active state */
+  color: #ffffff; /* White text color for active state */
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.3); /* deeper shadow for active link */
+}
+
+/* Add some spacing on hover and active */
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  padding-left: 20px; /* Indentation effect */
+  
+}
+
+
+
+  
+  /* Main Content */
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Profile Section */
+  
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+   
+  .profile-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .profile-details {
+    max-width: 400px;
+  }
+  
+  .edit-btn {
+    padding: 5px 10px;
+    background: linear-gradient(90deg, #28a745, rgb(0, 105, 32));
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-style:15px;
+    margin-top: 5px;
+    
+  }
+  
+  /* Skills Section */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top:10px;
+    
+  }
+  #skills h2 {
+    margin-top: 30px;  /* Adds the same margin */
+    font-size: 22px;
+  }
+  
+  .skills-list span {
+    background-color: #d0f0e1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color:#008000;
+    font-weight:bold;
+    
+  }
+  
+  .add-btn {
+    margin-top: 10px;
+    padding: 3px 11px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size:12px;
+    font-weight:bold;
+  } 
+
+  /* Reset and Layout Adjustments */
+#certifications {
+  padding: 20px;
+  margin-top: 10px;
+  overflow: hidden; /* Ensures content doesn't overflow */
+  margin-left: -18px;
+}
+
+#certifications h2 {
+  margin: 0 0 8px 0; /* Compact spacing */
+  font-size: 22px;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Consistent spacing */
+}
+
+
+
+
+/* Certifications File Upload Button */
+.file-upload-label {
+  display: inline-block; /* Ensures the label behaves like a button */
+  padding: 5px 10px; /* Adds comfortable padding */
+  background: linear-gradient(90deg, #28a745, rgb(0, 105, 32)); /* Green gradient */
+  color: white;
+  font-size: 10px; /* Standard text size */
+  font-weight: bold;
+  border: none; /* Removes any default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for better UX */
+  text-align: center;
+  margin-top: 0px; /* Adds spacing from other elements */
+  margin-left: 0px;
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect */
+.file-upload-label:hover {
+  background-color: #218838; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Hidden Input */
+.file-upload-input {
+  display: none; /* Completely hide the default input element */
+}
+
+
+/* Bio Section (Ensure Visibility) */
+#bio {
+  padding: 20px;
+  margin-top: 30px; /* Ensure space between sections */
+  color: #8a8a8a;
+  width: 600px;
+  border-radius: 8px;
+ 
+  margin-top: -10px;
+  margin-left: -15px;
+  font-size: 14px;
+  
+}
+
+#bio h2{
+  color: black;
+  font-size:22px;
+  margin-bottom:5px;
+}
+
+  
+
+
+/* Experience Section Styles */
+.experience {
+  margin-bottom: 15px;
+  padding: 10px;
+
+  border-radius: 8px;
+  margin-top: -5px;
+ 
+}
+
+#experience h2 {
+font-size: 22px;
+margin-left: 5px;
+margin-top: -10px;
+
+}
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100px;
+}
+
+.experience .company-name {
+  font-size: 14px;
+  color: #28a745;
+  margin-left: -5px;
+}
+
+.experience .employment-type {
+  background: #d0f0e1;
+  color: green;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-left: 15px;
+}
+
+.experience .details {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.experience .duration {
+  font-size: 14px;
+  color: #666;
+}
+.experience .role{
+  margin-left: -5px;
+}
+
+/* Education Section Styles */
+.education {
+  margin-bottom: -5px;
+  padding: 10px;
+  
+  border-radius: 8px;
+
+  width: 400px;
+  margin-left: -5px;
+  
+}
+#education h2{
+  font-size:22px;
+  margin-left: 5px;
+}
+
+.education .university-name {
+  font-size: 14px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.education .degree {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #444;
+  font-size:14px;
+}
+
+.education .year {
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+
+
+
+ /*calendar*/
+  
+ .calendar-wrapper {
+  width: 90%;
+  max-width: 800px;
+  background-color: #fcfcfc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 1px;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#month-year {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.add-event-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-cell {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  position: relative;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;border-style: solid;
+  border-color: #c9c8c7;
+  border-width: 2px;
+}
+
+.calendar-cell:hover {
+  background-color: #c9c8c7;
+}
+
+.day-number {
+  font-size: 14px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: black;
+}
+
+.event-marker {
+  margin-top: 20px;
+  background-color: #007bff;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  color: white;
+  display: inline-block;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content input,
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+/* General Button Styles */
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Buttons (◁, ▷) */
+.nav-button {
+  background-color: transparent;
+  color: gray;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.nav-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Add Event Button */
+.add-event-button {
+  background: linear-gradient(90deg, #28a745, rgb(0, 105, 32));
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.add-event-button:hover {
+  background: linear-gradient(90deg, #28a745, rgb(0, 105, 32));
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* View Buttons (Month, Week, Year) */
+.view-button {
+  background-color: transparent;
+  border: 1px solid #444;
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: #aaa;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.view-button.active {
+  background: linear-gradient(90deg, #28a745, rgb(0, 105, 32));
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Footer*/
+/* Footer Section */
+/* Footer Section */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem 0;
+  min-height: 300px; /* Adjust according to your footer content height */
+
+  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-left: -30px;
+  margin-right: 50px; /* Adjust this value for desired spacing */
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-grow: 1;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+  color: #f9a826;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #2b9348;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #f9a826;
+}
+
+.contact-info p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 2rem; /* Adds space above the footer-bottom */
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #0a4b1a;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+

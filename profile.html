@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkLearn Dashboard</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<header class="header">
+  <div class="logo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </div>
+  <nav class="nav-links">
+      <a href="HOMEPAGE ACCOUNT.html">Home</a>
+      <a href="ABOUT US ACCOUNT.html">About Us</a>
+      <a href="FIND JOBS.html">Find Jobs</a>
+  </nav>
+  <header>
+    <div class="header-icons">
+      <span class="icon-link"><i class="fa-solid fa-envelope"></i></span>
+      <span class="icon-link"><i class="fa-solid fa-bell"></i></span>
+        <a href="profile.html"
+        class="icon-link">
+        <i class="fa-solid fa-user"></i>
+        </a>
+       </div>
+    </div>
+  </header>
+</header>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+     
+
+    <aside class="sidebar" id="movable-sidebar">
+      <div class="logo">WorkLearn</div>
+      <nav class="whole-dashboard">
+        <ul>
+          <li><a href="profile.html" id="dashboard-link">Dashboard</a></li>
+          <li><a href="IQ TEST.html" id="IQ-test">Test your IQ</a></li>
+          <li><a href="RESUMEBUILDER.html" id="build-resume">Resume Builder</a></li>
+          <li><a href="INTERVIEWTIPS.html" id="skills-link">Interview Practice</a></li>
+          <li><a href="#certifications" id="certifications-link">Certifications</a></li>
+          <li><a href="LOGIN.html" id="logout-link">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Profile Section -->
+      <section id="profile" class="profile-section">
+      
+        <div class="profile-card">
+          <img src="images/profile-placeholder.png" alt="Profile Picture" class="profile-pic">
+          <div class="profile-details">
+            <h1>Ranilo John</h1>
+            <p>Software Developer</p>
+            <p>delosangeles.ranilojohn@ue.edu.ph</p>
+            <button class="edit-btn">Edit Profile</button>
+          </div>
+        </div>
+      </section>
+
+       
+      <!-- Skills Section -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>CSS</span>
+          <span>Node.js</span>
+          <span>C++</span>
+          <span>C#</span>
+       
+        </div>
+        <button class="add-btn">Add Skill</button>
+      </section>
+    
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <label for="cert-upload" class="file-upload-label">
+      Upload Certification
+    </label>
+    <input type="file" id="cert-upload" accept=".pdf, .jpg, .png" class="file-upload-input">
+    <div class="cert-list">
+      <!-- Example certifications can be dynamically added here -->
+      <div class="cert-item">
+      
+      </div>
+    </div>
+  </section>
+  
+  
+      
+
+      </section>
+      <section id="bio">
+        <h2>Bio</h2>
+        <div class="bio-content">
+          <p>Anything tech-related, I can handle!</p>
+          <button class=""></button>
+        </div>
+      </section>
+
+
+ <!-- Experience Section -->
+ <div id="experience" class="section">
+  <h2>All Experiences</h2>
+  <div class="experience">
+    <div class="experience-header">
+      <span class="company-name">Trendyol.com</span>
+      <span class="employment-type">Fulltime</span>
+    </div>
+    <div class="details">
+      <span class="role">Front-End Developer</span>
+      <span class="duration">1 Year 2 Months - Oct 2021, Dec 2022</span>
+    </div>
+  </div>
+ 
+</div>
+
+
+<!-- Education Section -->
+<div id="education" class="section">
+  <h2>Education</h2>
+  <div class="education">
+    <span class="university-name">University of the East - Caloocan</span>
+    <span class="degree">Bachelors Degree in Computer Engineering</span>
+    <span class="year">June, 2027 - Caloocan,Philippines</span>
+  </div>
+ 
+</div>
+
+
+
+
+  
+<!-- Calendar -->
+<div class="calendar-wrapper">
+  <!-- Calendar Header -->
+  <div class="calendar-header">
+    <span id="month-year"></span>
+    <div class="view-buttons">
+      <button class="view-button active" id="month-view">Month</button>
+      <button class="view-button" id="week-view">Week</button>
+      <button class="view-button" id="year-view">Year</button>
+    </div>
+  </div>
+  
+  <!-- Calendar Controls -->
+  <div class="calendar-controls">
+    <button id="prev-month" class="nav-button">◁</button>
+    <button id="next-month" class="nav-button">▷</button>
+    <button id="add-event-button" class="add-event-button">+ Add Event</button>
+  </div>
+  
+  <!-- Days of the Week -->
+  <div class="calendar-days">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  
+  <!-- Calendar Grid -->
+  <div class="calendar-grid" id="calendar-grid"></div>
+</div>
+
+<!-- Event Modal -->
+<div id="event-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Add Event</h2>
+    <form id="event-form">
+      <label for="event-date">Date:</label>
+      <input type="date" id="event-date" required>
+      <label for="event-title">Event Title:</label>
+      <input type="text" id="event-title" placeholder="e.g., Birthday, Deadline" required>
+      <button type="submit">Add Event</button>
+    </form>
+  </div>
+</div>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/Footer WL.png" alt="WL Logo">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Job Categories</h3>
+        <ul>
+          <li><a href="FIND JOBS.html">Job Search</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="FIND JOBS.html">Recommended Jobs</a></li>
+          <li><a href="post-job.html">Job Applications</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Employers</h3>
+        <ul>
+          <li><a href="REGISTER.html">Register for Free</a></li>
+          <li><a href="FIND JOBS.html">Job Search</a></li>
+          <li><a href="#">Products & Prices</a></li>
+          <li><a href="#">Marketing Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><img src="images/Footer IG.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/Footer Fb.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="images/Footer X.png" alt="Twitter"></a></li>
+          <li><a href="#"><img src="images/Your paragraph text (10).png" alt="Email"></a></li>
+        </ul>
+        <div class="contact-info">
+          <p>+63 2868 9200 | 180011101060</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 WorkLearn. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="profile.js"></script>
+</body>
+</html>

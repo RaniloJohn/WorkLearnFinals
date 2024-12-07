@@ -1,0 +1,1135 @@
+/*header*/
+.header {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    height: 60px;
+    overflow: hidden;
+   
+}
+
+.logo img {
+    max-width: 10%;
+    max-height: 10%;
+    position: absolute;
+    top: -15px;
+    left: 200px;
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect */
+    z-index:11;
+}
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.nav-links {
+
+    display: flex; /* Aligns links horizontally */
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 15px; /* Spacing between links */
+    position:absolute;
+    left: 600px;
+}
+
+.nav-links a {
+    display: inline-block; /* Required for transform to affect the text */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #008000; /* Green color */
+    font-weight: bold;
+    font-size: 16px; /* Optional for better visibility */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth scaling and color change */
+    
+}
+
+.nav-links a:hover {
+    transform: scale(1.15); /* Slowly grows on hover */
+    color: #004d00; /* Darker green on hover */
+}
+
+/* Styling for the Header Icons Container */
+.header-icons {
+  display: flex; /* Align icons horizontally */
+  align-items: center; /* Vertically align icons */
+  justify-content: flex-end; /* Align icons to the right */
+  gap: 40px; /* Space between icons */
+  padding: 10px 20px; /* Padding around the container */
+  background-color:white; /* Light background color */
+}
+
+/* Styling for Each Icon */
+.header-icons i {
+  font-size: 22px; /* Icon size */
+  color: #00924c;; /* Icon color */
+  cursor: pointer; /* Add pointer cursor on hover */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'Garet';
+    src: url('font/Garet.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Garet', sans-serif;
+    
+}
+
+
+h1, h2, h3 {
+    font-family: 'League Spartan', 'Arial', sans-serif;
+}
+
+/* Apply League Spartan for titles and headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: larger;
+}
+
+/* Apply Garet for smaller texts (body text, paragraphs, etc.) */
+body, p, span, li, a {
+    font-family: 'Garet', sans-serif;
+    font-size: 15px;
+    color: black;
+    
+}
+
+
+v
+/* Service Cards */
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background-color: #e0f7fa; /* Light background color for the card */
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 16px; /* Rounds the corners of the card */
+    overflow: hidden; /* Ensures the image fits within rounded corners */
+    width: 250px; /* Set fixed width for the card */
+    height: 250px; /* Set fixed height for the card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.1); /* Expands the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a larger shadow on hover */
+    transform-origin: center;
+}
+
+/* Icon Images in Service Cards */
+.card img {
+    width: 100%; /* Makes the image take full width of the card */
+    height: auto;
+
+}
+
+/* Optional Image Zoom Effect on Hover */
+.card:hover img {
+    transform: scale(1.05); /* Slightly zooms the image */
+}
+
+
+/* Icon Images in Service Cards */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire card area */
+    border-radius: inherit; /* Matches the card's rounded corners */
+    transition: transform 0.3s ease;
+}
+
+/* Centered text styling */
+.card h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Resume Section */
+.resume {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.resume-content {
+    display: flex;
+    flex-direction: row; /* Ensures image and text are side-by-side */
+    align-items: center; /* Aligns items vertically center */
+    gap: 2rem; /* Adds space between image and text */
+}
+
+/* Image styling */
+.resume-image {
+    width: 25%; /* Sets image to take half the width of the container */
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0; /* Prevents image from shrinking if the window resizes */
+    margin-left: 200px;
+}
+
+/* Text content styling */
+.resume-text {
+    width: 50%; /* Sets text to take half the width of the container */
+}
+
+.resume h2 {
+    font-size: 2.5rem;  /* Increased font size for the heading */
+    margin-bottom: 1rem;
+}
+
+.resume-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume p {
+    font-size: 1.2rem;  /* Increased font size for the paragraph */
+    line-height: 1.6;  /* Adjust line-height for better readability */
+    margin-bottom: 1.5rem;
+}
+
+.get-started {
+    padding: 0.8rem 1.5rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.get-started:hover {
+    background-color: #45a049;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px; /* Adjust this height to match the desired size */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales the image to cover the entire section without stretching */
+    display: block;
+}
+
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Adjust width of the icon container */
+    height: 40px; /* Adjust height of the icon container */
+    background-color: #2b9348;  /* Background color for the icon */
+    border-radius: 50%;  /* Circular shape */
+    overflow: hidden;  /* Ensures image fits within circular container */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f9a826;  /* Change background color on hover */
+    transform: scale(1.1);  /* Slightly enlarge icon on hover */
+}
+
+.social-icons img {
+    width: 100%;  /* Makes the image fill the container */
+    height: 100%; /* Makes the image fill the container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;  /* Start with no visibility */
+    }
+    100% {
+        opacity: 1;  /* End with full visibility */
+    }
+}
+
+/* Apply the animation to elements */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;  /* Fade in effect, 1.5s duration */
+}
+
+/* Optional: Add a slight delay to stagger animations */
+.fade-in-delay {
+    animation: fadeIn 1.5s ease-in-out 0.5s;  /* 0.5s delay before starting */
+}
+
+/* ABOUT US */
+
+/* Hero Section */
+.hero-about {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-about .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-about h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* About Content Section */
+.about-content {
+    padding: 2rem 10%;
+    text-align: left;
+    color: #333;
+}
+
+.about-content h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    color: #f9a826;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Mission Section Styling */
+.mission-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.mission-image {
+    width: 40%; /* Adjust width as needed */
+    height: auto;
+    border-radius: 8px;
+}
+
+.mission-text {
+    width: 60%; /* Adjust width to fit nicely with the image */
+}
+
+.mission-text h3 {
+    font-size: 1.5rem;
+    color: #f9a826;
+    margin-bottom: 0.5rem;
+}
+
+.mission-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    background-color: #f4f8fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0a8d48;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .nav-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar .auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .auth-buttons img.profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navbar .auth-buttons .notifications img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Main Content Layout */
+.content {
+    display: grid;
+    grid-template-columns: 300px 1fr 400px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.filters {
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+   
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 10px; /* Space between sections */
+    max-width: 300px;
+}
+
+.filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -40px;
+    margin-left: 10px;
+}
+
+.filters h2 {
+    color: #0a8d48;
+    font-size: 18px;
+
+}
+
+.filters .reset-filter {
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-group {
+    background-color: white;
+    padding: 15px;
+    
+
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+    margin-bottom: -35px;
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.filters input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.salary-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.salary-range input {
+    width: 45%;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filters input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: #ddd;
+    outline: none;
+    border-radius: 4px;
+}
+
+.filters input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #0a8d48;
+    cursor: pointer;
+}
+
+/* Two-column layout for checkboxes */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+/* Individual containers for movable sections */
+.filter-job-type,
+.filter-location,
+.filter-experience-level,
+.filter-range-salary,
+.filter-on-location {
+    position: relative; /* Allows independent positioning */
+}
+
+.line-filter {
+    height: 0.5px;
+    width: 100%;
+    background: #333;
+    opacity: 20%;
+    margin-top: 30px;
+
+
+}
+
+@media (max-width: 768px) {
+    .filters {
+        max-width: 100%;
+    }
+}
+
+  
+
+
+/* Job Listings Section */
+.job-listings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.1);
+    overflow-y : scroll;
+    height: 800px;
+    
+    width:700px;
+    margin-left: 45px;
+    margin-top: 20px;
+    
+}
+
+.job-listings h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+}
+/* Search Bar */
+.search{
+   
+
+    background: #3333;
+height: 100px;
+align-items: center;
+width: 200px;
+
+border-radius: 28px;
+
+
+
+}
+.search-input {
+    font-size: 16px;
+    font-family: 'Garet', sans-serif;
+    color: black;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    margin-bottom: 20px;
+
+}
+
+.job-card {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 40px; /* Adjusted spacing between cards */
+    border-radius: 10px; /* Slightly larger corner radius for a smoother design */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+}
+
+.job-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Align logo to the top-left */
+}
+
+/* Adjusted header with less spacing */
+.job-card .job-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduced spacing between image and text */
+    margin-bottom: 5px; /* Reduced spacing after header */
+}
+
+.job-card h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0a8d48;
+    margin-top: -25px;
+}
+
+.job-card .company {
+    font-size: 14px;
+    color: black;
+    font-weight:bold;
+    margin-left: 60px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+/* Compact description style */
+.job-card .description {
+    margin-top: 5px; /* Reduced top margin */
+    font-size: 14px;
+    color: black;
+    line-height: 1.4; /* Slightly tighter line spacing */
+}
+
+
+
+/* Layout for job details: Location, Type of Work, Salary */
+.job-card .job-details {
+    display: flex;
+    gap: 15px;
+
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Reduced space between job details */
+.job-card .job-details p {
+    margin: 0 2px 0 0; /* Reduced right margin */
+}
+
+/* Additional styling for the labels (Location, Salary, etc.) */
+.job-card .job-details p strong {
+    color: #0a8d48; /* Make the labels green */
+}
+.line-1 {
+    height: 0.5px;
+    background: #333;
+    opacity: 20%;
+    margin-top: 10px;
+}
+
+
+/* Job Details Section */
+/* Job Details Section */
+.jobdetails {
+    position: absolute;
+    top: 109px; /* Adjust this based on your layout */
+    right: 5px;
+    transform: translateX(100%); /* Start offscreen */
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    background-color: white;
+    width: 430px;
+    height: 780px; /* Adjust height based on your content */
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Job Banner Section */
+  .job-details-banner {
+    background-color: #444;
+    border-radius: 8px;
+    height: 150px;
+  }
+  
+  .job-details-banner img {
+    border-radius: 8px;
+    height: 150px;
+  }
+  
+  /* Display the job details when activated */
+  .jobdetails.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .jobdetails.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Job Title Styling (Job Details) */
+  .jobdetails h2 {
+    font-size: 20px;
+    color: #333;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  /* Job Details Paragraph Styling */
+  .jobdetails p {
+    font-size: 15px;
+    margin: 5px 0;
+    margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+  }
+  
+  #job-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-left: 10px;
+    font-weight: normal;
+  }
+  
+  /* Apply Now Button Styling */
+  .apply-now {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .jobdetails .apply-now {
+    margin-left: 75px;
+    background-color: #28a745;
+    color: white;
+    width: 300px;
+    border-radius: 20px;
+    height: 45px;
+    margin-top: -10px;
+  }
+  
+  .jobdetails .apply-now:hover {
+    background-color: #218838;
+  }
+  
+  /* Job Company Section Styling */
+  .job-company {
+    padding: 20px; /* Add space around company content */
+    margin-bottom: 20px; /* Adds space below the company section */
+  }
+  
+  .job-company .company-image {
+    /* No layout changes to image */
+    margin-left: -5px;
+    margin-top: -50px;
+  }
+  
+  .job-company img {
+    max-width: 80px; /* Limit the width of the company logo */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .job-company h2 {
+    font-size: 24px;
+    color: black;
+    margin-top: -5px;
+    margin-bottom: -10px;
+    margin-left: 5px;
+  }
+  
+  .job-company p {
+    font-size: 16px;
+    color: #777; /* Light color for the company name */
+
+    margin-bottom: -20px;
+    margin-left: 6px;
+  }
+  
+  /* Tabs Section Styling */
+  .tabs-container {
+    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    height: 50px;
+    width: 380px;
+    margin-left: 30px;
+  }
+  
+  .tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  
+  .tab {
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+  }
+  
+  .tab:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .tab.active {
+    z-index: 2;
+    color: white;
+  }
+  
+  .tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-color: #3498db;
+    transition: left 0.3s ease, width 0.3s ease;
+    border-radius: 50px;
+    z-index: 1;
+  }
+  
+  /* Tab Content Area */
+  .tab-content {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+   
+
+  
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  /* Individual Tab Panes */
+  .tab-pane {
+    display: none; /* Hide all tabs by default */
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  /* Active Tab Pane */
+  .tab-pane.active {
+    display: block;
+  }
+  
+  /* Google Maps iframe */
+  #map-iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Adjustments for Smaller Screens */
+  @media (max-width: 768px) {
+    #map-iframe {
+      height: 150px; /* Adjust height for smaller screens */
+    }
+  
+    .tab-pane#content-maps {
+      height: 150px;
+    }
+  
+    #map-iframe {
+      height: 100%; /* Dynamically adjust to parent height */
+    }
+  }
+  
+/* Filters section */
+.filters {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    height: 780px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.filters h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filters .toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.filters input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+/* Details panel */
+.details-panel {
+    background-color: #ffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.details-panel h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details-panel .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.details-panel .tabs button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-panel .tabs button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer*/
+/* Footer Section */
+/* Footer Section */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    min-height: 300px; /* Adjust according to your footer content height */
+
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 200px;
+    margin-left: -30px;
+    margin-right: 50px; /* Adjust this value for desired spacing */
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.3rem;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    color: #f9a826;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #2b9348;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f9a826;
+}
+
+.contact-info p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 2rem; /* Adds space above the footer-bottom */
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #0a4b1a;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+
+
+
+
+
+
