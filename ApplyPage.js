@@ -2,11 +2,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('jobForm');
     const salaryTypeRadios = document.getElementsByName('salary-type');
     const hourlyRateContainer = document.getElementById('hourly-rate-container');
+    const sections = document.querySelectorAll('.form-section');
+    const navItems = document.querySelectorAll('aside ul li');
 
     // Toggle hourly rate input visibility based on salary type selection
     salaryTypeRadios.forEach(radio => {
         radio.addEventListener('change', function() {
             hourlyRateContainer.style.display = this.value === 'hourly' ? 'block' : 'none';
+        });
+    });
+
+    // Handle section switching
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const sectionId = this.getAttribute('data-section');
+            sections.forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
+            });
+            navItems.forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
         });
     });
 

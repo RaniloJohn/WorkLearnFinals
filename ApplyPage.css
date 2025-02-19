@@ -108,9 +108,9 @@ aside li.active span {
 }
 
 form {
-    flex-grow: 1;
+    flex-grow: 2;
     background-color: white;
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
