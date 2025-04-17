@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="ApplyPage.css">
+    <link rel="stylesheet" href="findjobs.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/WL (1).png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="HOMEPAGE ACCOUNT.html">Home</a>
+            <a href="ABOUT US ACCOUNT.html">About Us</a>
+            <a href="FIND JOBS.html">Find Jobs</a>
+        </nav>
+        <div class="header-icons">
+            <span class="icon-link"><i class="fa-solid fa-envelope"></i></span>
+            <span class="icon-link"><i class="fa-solid fa-bell"></i></span>
+            <a href="profile.html" class="icon-link">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <aside>
+                <ul>
+                    <li class="active" data-section="about"><span>1</span> About</li>
+                    <li data-section="details"><span>2</span> Details</li>
+                    <li data-section="application"><span>3</span> Application</li>
+                    <li data-section="stages"><span>4</span> Stages</li>
+                    <li data-section="summary"><span>5</span> Summary</li>
+                </ul>
+            </aside>
+
+            <form id="jobForm">
+                <section id="about" class="form-section">
+                    <h2>Employment type</h2>
+                    <p>Pick one or multiple options</p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="employment" value="full-time"> Full-time</label>
+                        <label><input type="checkbox" name="employment" value="part-time"> Part-time</label>
+                        <label><input type="checkbox" name="employment" value="on-demand"> On demand</label>
+                        <label><input type="checkbox" name="employment" value="negotiable"> Negotiable</label>
+                    </div>
+                </section>
+
+                <section id="details" class="form-section" style="display:none;">
+                    <h2>Working schedule</h2>
+                    <p>You can pick multiple work schedules.</p>
+                    <select id="schedule">
+                        <option value="">Pick working schedule</option>
+                        <option value="monday-friday">Monday to Friday</option>
+                        <option value="weekend">Weekend availability</option>
+                        <option value="day-shift">Day shift</option>
+                    </select>
+                </section>
+
+                <section id="application" class="form-section" style="display:none;">
+                    <h2>Salary</h2>
+                    <p>Choose how you prefer to pay for this job.</p>
+                    <div class="radio-group">
+                        <label><input type="radio" name="salary-type" value="hourly" checked> Hourly</label>
+                        <label><input type="radio" name="salary-type" value="custom"> Custom</label>
+                    </div>
+                    <div id="hourly-rate-container">
+                        <label for="hourly-rate">Hourly rate</label>
+                        <input type="number" id="hourly-rate" placeholder="$35">
+                    </div>
+                    <label><input type="checkbox" id="negotiable"> Salary is negotiable</label>
+                </section>
+
+                <section id="stages" class="form-section" style="display:none;">
+                    <h2>Hiring multiple candidates?</h2>
+                    <p>This will be displayed on job page for candidates to see.</p>
+                    <label><input type="checkbox" id="multiple-candidates"> Yes, I am hiring multiple candidates</label>
+                </section>
+
+                <section id="summary" class="form-section" style="display:none;">
+                    <h2>Summary</h2>
+                    <p>Review all the information before submitting.</p>
+                    <!-- Add summary details here -->
+                </section>
+
+                <div class="form-actions">
+                    <button type="button" class="secondary">Back: About</button>
+                    <button type="submit">Next: Application</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="ApplyPage.js"></script>
+</body>
+</html>
