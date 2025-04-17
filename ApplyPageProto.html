@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ApplyPageProto.css">
+  
+
+<!-- Navbar -->
+<header class="header">
+    <div class="logo">
+      <img src="images/WL (1).png" alt="Logo">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </div>
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Find Jobs</a>
+    </nav>
+    <header>
+      <div class="header-icons">
+        <span class="icon-link"><i class="fa-solid fa-envelope"></i></span>
+        <span class="icon-link"><i class="fa-solid fa-bell"></i></span>
+        <a href="profile.html"
+        class="icon-link">
+        <i class="fa-solid fa-user"></i>
+        </a>
+       </div>
+      </div>
+    </header>
+  </header>
+            
+<div class="container">
+    <h1>Practice Interview Questions
+        <div id="timer" style="font-size: 0.8em; color: #7a7a7a; margin-bottom: 15px;">Time Left: 3:00</div>
+
+    </h1>
+    <form class="questionnaire" id="questionForm" onsubmit="return submitForm(event);">
+        <!-- Question 1 -->
+        <div class="question" id="question1">
+            <label for="q1">1. Tell me about yourself and why you're interested in this position.</label>
+            <textarea id="q1" name="q1" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(2)">Next</button>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="question" id="question2">
+            <label for="q2">2. Describe a challenging project you worked on. What was your role, and how did you overcome any obstacles?</label>
+            <textarea id="q2" name="q2" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(3)">Next</button>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="question" id="question3">
+            <label for="q3">3. How do you prioritize tasks when you have multiple deadlines?</label>
+            <textarea id="q3" name="q3" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(4)">Next</button>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="question" id="question4">
+            <label for="q4">4. Give an example of a time you had to learn something new quickly. What strategies did you use?</label>
+            <textarea id="q4" name="q4" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(5)">Next</button>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" id="question5">
+            <label for="q5">5. How do you handle constructive criticism? Can you provide an example?</label>
+            <textarea id="q5" name="q5" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(6)">Next</button>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question" id="question6">
+            <label for="q6">6. Describe a time you worked with a team. What role did you play, and what was the outcome?</label>
+            <textarea id="q6" name="q6" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(7)">Next</button>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question" id="question7">
+            <label for="q7">7. Can you explain a time when you faced an unexpected problem at work or school and how you resolved it?</label>
+            <textarea id="q7" name="q7" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(8)">Next</button>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question" id="question8">
+            <label for="q8">8. How do you approach setting and achieving personal or professional goals?</label>
+            <textarea id="q8" name="q8" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(9)">Next</button>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question" id="question9">
+            <label for="q9">9. Describe a situation where you had to deal with a difficult person. How did you handle it?</label>
+            <textarea id="q9" name="q9" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="button" class="next-btn" onclick="showNext(10)">Next</button>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question" id="question10">
+            <label for="q10">10. Why do you think you’re a good fit for this role, and what unique qualities would you bring to our team?</label>
+            <textarea id="q10" name="q10" rows="4" placeholder="Type your response here..."></textarea>
+            <button type="submit" class="submit-btn">Submit Answers</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("question1").style.display = "block"; // Show the first question
+
+    function showNext(questionNumber) {
+        const currentQuestion = document.getElementById("question" + (questionNumber - 1));
+        const nextQuestion = document.getElementById("question" + questionNumber);
+
+        // Hide the current question and show the next one
+        currentQuestion.style.display = "none";
+        nextQuestion.style.display = "block";
+    }
+
+    function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Here you can handle form submission (e.g., save data, make an API call)
+
+        // Redirect to the profile page after submission
+        window.location.href = "profile.html";
+    }
+</script>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo"><img src="images/Footer WL.png" alt="WL Logo"></div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Job Categories</h3>
+                <ul>
+                    <li><a href="#">Job Search</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Recommended Jobs</a></li>
+                    <li><a href="#">Job Applications</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Employers</h3>
+                <ul>
+                    <li><a href="#">Register for Free</a></li>
+                    <li><a href="#">Job Search</a></li>
+                    <li><a href="#">Products & Prices</a></li>
+                    <li><a href="#">Marketing Insights</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="images/Footer IG.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="images/Footer Fb.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="images/Footer X.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/Your paragraph text (10).png" alt="Email"></a></li>
+                </ul>
+                <p>+63 2868 9200 | 180011101060</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 WorkLearn. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    let currentQuestionNumber = 1;
+    let timer; // Variable to store the timer reference
+    const questionDuration = 180; // 3 minutes in seconds
+
+    function startTimer() {
+        let timeLeft = questionDuration;
+
+        // Update the timer display every second
+        timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                showNext(currentQuestionNumber + 1); // Automatically move to the next question
+            } else {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById("timer").textContent = `Time Left: ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+                timeLeft--;
+            }
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timer); // Stop the current timer
+    }
+
+    function showNext(questionNumber) {
+        stopTimer(); // Stop the timer for the current question
+        const currentQuestion = document.getElementById("question" + currentQuestionNumber);
+        const nextQuestion = document.getElementById("question" + questionNumber);
+
+        if (currentQuestion) currentQuestion.style.display = "none"; // Hide the current question
+        if (nextQuestion) {
+            nextQuestion.style.display = "block"; // Show the next question
+            currentQuestionNumber = questionNumber;
+            startTimer(); // Start the timer for the next question
+        } else {
+            document.getElementById("timer").textContent = "All questions completed!";
+        }
+    }
+
+    // Start with the first question's timer
+    document.getElementById("question1").style.display = "block";
+    startTimer();
+</script>
+
+
+</body>
+</html>
