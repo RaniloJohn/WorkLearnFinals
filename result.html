@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Test Results</title>
+    <link rel="stylesheet" href="iqtest.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🧠 myIQ Results</div>
+    </header>
+
+    <div class="result-container">
+        <h1>Your IQ Test Score</h1>
+        <h2><span id="score"></span> / 20</h2>
+        <p id="iq-level"></p>
+
+        <button onclick="restartTest()">Try Again</button>
+    </div>
+
+    <script>
+        // Get the stored score
+        let score = localStorage.getItem("finalScore");
+        document.getElementById("score").textContent = score;
+
+        // IQ Level Interpretation
+        function getIQLevel(score) {
+            if (score >= 18) return "🎓 Genius Level";
+            if (score >= 15) return "💡 Highly Intelligent";
+            if (score >= 12) return "📚 Above Average";
+            if (score >= 10) return "🙂 Average IQ";
+            if (score >= 5) return "🤔 Below Average";
+            return "🛑 Needs Improvement";
+        }
+
+        document.getElementById("iq-level").textContent = getIQLevel(score);
+
+        // Restart the test
+        function restartTest() {
+            localStorage.removeItem("finalScore");
+            window.location.href = "iqtest.html";
+        }
+    </script>
+</body>
+</html>

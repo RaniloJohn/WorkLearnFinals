@@ -1,46 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('jobForm');
-    const salaryTypeRadios = document.getElementsByName('salary-type');
-    const hourlyRateContainer = document.getElementById('hourly-rate-container');
-    const sections = document.querySelectorAll('.form-section');
-    const navItems = document.querySelectorAll('aside ul li');
+let currentStep = 0;
+const steps = document.querySelectorAll('.form-step');
+const indicators = document.querySelectorAll('.step');
+const backBtn = document.querySelector('.btn-back');
+const nextBtn = document.querySelector('.btn-next');
 
-    // Toggle hourly rate input visibility based on salary type selection
-    salaryTypeRadios.forEach(radio => {
-        radio.addEventListener('change', function() {
-            hourlyRateContainer.style.display = this.value === 'hourly' ? 'block' : 'none';
-        });
-    });
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('active', i === index);
+    indicators[i].classList.toggle('active', i <= index);
+  });
 
-    // Handle section switching
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const sectionId = this.getAttribute('data-section');
-            sections.forEach(section => {
-                section.style.display = section.id === sectionId ? 'block' : 'none';
-            });
-            navItems.forEach(nav => nav.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
+  backBtn.style.display = index === 0 ? 'none' : 'inline-block';
+  nextBtn.style.display = index < steps.length - 1 ? 'inline-block' : 'none';
+}
 
-    // Form submission handler
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Collect form data
-        const formData = new FormData(form);
-        const data = {
-            employmentTypes: formData.getAll('employment'),
-            workingSchedule: document.getElementById('schedule').value,
-            salaryType: formData.get('salary-type'),
-            hourlyRate: document.getElementById('hourly-rate').value,
-            isNegotiable: document.getElementById('negotiable').checked,
-            hiringMultipleCandidates: document.getElementById('multiple-candidates').checked
-        };
+function changeStep(direction) {
+  currentStep += direction;
+  currentStep = Math.max(0, Math.min(currentStep, steps.length - 1));
+  showStep(currentStep);
+}
 
-        // Here you would typically send this data to a server
-        console.log('Form data:', data);
-        alert('Form submitted successfully!');
-    });
+document.getElementById('applicationForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Your application has been submitted!');
+  this.reset();
+  currentStep = 0;
+  showStep(currentStep);
 });
+
+showStep(currentStep);
+

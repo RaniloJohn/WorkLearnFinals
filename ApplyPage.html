@@ -1,100 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application Form</title>
-    <link rel="stylesheet" href="ApplyPage.css">
-    <link rel="stylesheet" href="findjobs.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Application Form</title>
+  <link rel="stylesheet" href="ApplyPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <div class="page-wrapper">
+    <!-- HEADER -->
     <header class="header">
-        <div class="logo">
-            <img src="images/WL (1).png" alt="Logo">
-        </div>
-        <nav class="nav-links">
-            <a href="HOMEPAGE ACCOUNT.html">Home</a>
-            <a href="ABOUT US ACCOUNT.html">About Us</a>
-            <a href="FIND JOBS.html">Find Jobs</a>
-        </nav>
-        <div class="header-icons">
-            <span class="icon-link"><i class="fa-solid fa-envelope"></i></span>
-            <span class="icon-link"><i class="fa-solid fa-bell"></i></span>
-            <a href="profile.html" class="icon-link">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
+      <div class="logo">
+        <img src="images/WL (1).png" alt="Logo">
+      </div>
+      <nav class="nav-links">
+        <a href="HOMEPAGE ACCOUNT.html">Home</a>
+        <a href="ABOUT US ACCOUNT.html">About Us</a>
+        <a href="FIND JOBS.html">Find Jobs</a>
+      </nav>
+      <div class="header-icons">
+        <span class="icon-link"><i class="fa-solid fa-envelope"></i></span>
+        <span class="icon-link"><i class="fa-solid fa-bell"></i></span>
+        <a href="profile.html" class="icon-link">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
     </header>
 
-    <main>
-        <div class="content">
-            <aside>
-                <ul>
-                    <li class="active" data-section="about"><span>1</span> About</li>
-                    <li data-section="details"><span>2</span> Details</li>
-                    <li data-section="application"><span>3</span> Application</li>
-                    <li data-section="stages"><span>4</span> Stages</li>
-                    <li data-section="summary"><span>5</span> Summary</li>
-                </ul>
-            </aside>
+    <!-- FORM CONTAINER -->
+    <div class="container">
+      <div class="step-indicator">
+        <div class="step active" data-step="1"></div>
+        <div class="step" data-step="2"></div>
+        <div class="step" data-step="3"></div>
+        <div class="step" data-step="4"></div>
+        <div class="step" data-step="5"></div>
+      </div>
 
-            <form id="jobForm">
-                <section id="about" class="form-section">
-                    <h2>Employment type</h2>
-                    <p>Pick one or multiple options</p>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="employment" value="full-time"> Full-time</label>
-                        <label><input type="checkbox" name="employment" value="part-time"> Part-time</label>
-                        <label><input type="checkbox" name="employment" value="on-demand"> On demand</label>
-                        <label><input type="checkbox" name="employment" value="negotiable"> Negotiable</label>
-                    </div>
-                </section>
-
-                <section id="details" class="form-section" style="display:none;">
-                    <h2>Working schedule</h2>
-                    <p>You can pick multiple work schedules.</p>
-                    <select id="schedule">
-                        <option value="">Pick working schedule</option>
-                        <option value="monday-friday">Monday to Friday</option>
-                        <option value="weekend">Weekend availability</option>
-                        <option value="day-shift">Day shift</option>
-                    </select>
-                </section>
-
-                <section id="application" class="form-section" style="display:none;">
-                    <h2>Salary</h2>
-                    <p>Choose how you prefer to pay for this job.</p>
-                    <div class="radio-group">
-                        <label><input type="radio" name="salary-type" value="hourly" checked> Hourly</label>
-                        <label><input type="radio" name="salary-type" value="custom"> Custom</label>
-                    </div>
-                    <div id="hourly-rate-container">
-                        <label for="hourly-rate">Hourly rate</label>
-                        <input type="number" id="hourly-rate" placeholder="$35">
-                    </div>
-                    <label><input type="checkbox" id="negotiable"> Salary is negotiable</label>
-                </section>
-
-                <section id="stages" class="form-section" style="display:none;">
-                    <h2>Hiring multiple candidates?</h2>
-                    <p>This will be displayed on job page for candidates to see.</p>
-                    <label><input type="checkbox" id="multiple-candidates"> Yes, I am hiring multiple candidates</label>
-                </section>
-
-                <section id="summary" class="form-section" style="display:none;">
-                    <h2>Summary</h2>
-                    <p>Review all the information before submitting.</p>
-                    <!-- Add summary details here -->
-                </section>
-
-                <div class="form-actions">
-                    <button type="button" class="secondary">Back: About</button>
-                    <button type="submit">Next: Application</button>
-                </div>
-            </form>
+      <form id="applicationForm">
+        <!-- Step 1 -->
+        <div class="form-step active">
+          <h2>Step 1: Basic Information</h2>
+          <label>Full Name</label>
+          <input type="text" name="fullname" required placeholder="Juan Dela Cruz" />
+          <label>Email Address</label>
+          <input type="email" name="email" required placeholder="juandelacruz@email.com" />
+          <label>Phone Number</label>
+          <input type="tel" name="phone" required placeholder="09XXXXXXXXX" />
         </div>
-    </main>
 
-    <script src="ApplyPage.js"></script>
+        <!-- Step 2 -->
+        <div class="form-step">
+          <h2>Step 2: Skills & Interests</h2>
+          <label>Top Skills</label>
+          <input type="text" name="skills" placeholder="e.g., Video Editing, Writing" />
+          <label>Rate Your Proficiency</label>
+          <select name="proficiency">
+            <option value="">Select</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+          <label>What excites you about working with us?</label>
+          <textarea name="motivation" rows="3" placeholder="I love collaborating on creative projects..."></textarea>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="form-step">
+          <h2>Step 3: Experience & Availability</h2>
+          <label>Have you joined any organizations before?</label>
+          <select name="joinedOrgs">
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <label>If yes, list them with role</label>
+          <textarea name="orgList" rows="2" placeholder="ABC Org – Events Head, DEF Org – Member..."></textarea>
+          <label>Tell us about a project or event you’ve helped with</label>
+          <textarea name="projectStory" rows="2"></textarea>
+          <label>Your usual availability</label>
+          <input type="text" name="availability" placeholder="e.g., Mon/Wed/Fri – 2PM to 6PM" />
+          <label>Can you commit to deadlines?</label>
+          <select name="deadlineCommit">
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <label>Are you willing to learn new skills?</label>
+          <select name="willingLearn">
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="form-step">
+          <h2>Step 4: Upload & Documents</h2>
+          <label>Upload Resume (PDF only)</label>
+          <input type="file" name="resume" accept=".pdf" />
+          <label>Upload Portfolio (optional)</label>
+          <input type="file" name="portfolio" accept=".pdf,.jpg,.jpeg,.png,.ppt,.pptx" />
+          <label>Link to Drive/Portfolio</label>
+          <input type="url" name="portfolioLink" placeholder="https://drive.google.com/..." />
+          <label>Tell us something about yourself</label>
+          <textarea name="aboutSelf" rows="3"></textarea>
+          <label>Why are you applying for this opportunity?</label>
+          <textarea name="reason" rows="3"></textarea>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="form-step">
+          <h2>Step 5: Review & Agreement</h2>
+          <p>Please review your application and confirm:</p>
+          <div class="checkbox-group">
+            <label class="checkbox-wrapper">
+              <span>I confirm all the information is accurate.</span>
+              <input type="checkbox" required />
+            </label>
+            <label class="checkbox-wrapper">
+              <span>I agree to be contacted for further steps.</span>
+              <input type="checkbox" required />
+            </label>
+          </div>
+          <button type="submit" class="btn-submit">Submit Application</button>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="form-nav">
+          <button type="button" class="btn-back" onclick="changeStep(-1)">Back</button>
+          <button type="button" class="btn-next" onclick="changeStep(1)">Next</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="images/Footer WL.png" alt="WL Logo">
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Job Categories</h3>
+            <ul>
+              <li><a href="FIND JOBS.html">Job Search</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="FIND JOBS.html">Recommended Jobs</a></li>
+              <li><a href="post-job.html">Job Applications</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Employers</h3>
+            <ul>
+              <li><a href="REGISTER.html">Register for Free</a></li>
+              <li><a href="FIND JOBS.html">Job Search</a></li>
+              <li><a href="#">Products & Prices</a></li>
+              <li><a href="#">Marketing Insights</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="#">Help Centre</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+              <li><a href="#"><img src="images/Footer IG.png" alt="Instagram"></a></li>
+              <li><a href="#"><img src="images/Footer Fb.png" alt="Facebook"></a></li>
+              <li><a href="#"><img src="images/Footer X.png" alt="Twitter"></a></li>
+              <li><a href="#"><img src="images/Your paragraph text (10).png" alt="Email"></a></li>
+            </ul>
+            <div class="contact-info">
+              <p>+63 2868 9200 | 180011101060</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 WorkLearn. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="ApplyPage.js"></script>
 </body>
 </html>
