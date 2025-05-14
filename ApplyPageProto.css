@@ -1,0 +1,330 @@
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Garet', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 900px;
+ margin-left: 600px;
+ margin-top: 20px;
+ margin-bottom:20px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  height: 100px; /* fixed height */
+  overflow-y: auto; /* add scroll if content overflows */
+}
+
+
+h2 { margin-bottom: 0.5rem; color: #333; }
+p { margin-bottom: 2rem; color: #666; }
+
+.form-step { display: none; animation: fadeIn 0.3s ease-in-out; }
+.form-step.active { display: block; }
+
+label { display: block; margin-bottom: 0.25rem; font-weight: 500; }
+
+/*header*/
+.header {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    height: 60px;
+    overflow: hidden;
+   
+}
+
+.logo img {
+    max-width: 10%;
+    max-height: 10%;
+    position: absolute;
+    top: -15px;
+    left: 200px;
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect */
+    z-index:11;
+}
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.nav-links {
+
+    display: flex; /* Aligns links horizontally */
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 15px; /* Spacing between links */
+    position:absolute;
+    left: 900px;
+}
+
+.nav-links a {
+    display: inline-block; /* Required for transform to affect the text */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #008000; /* Green color */
+    font-weight: bold;
+    font-size: 16px; /* Optional for better visibility */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth scaling and color change */
+    
+}
+
+.nav-links a:hover {
+    transform: scale(1.15); /* Slowly grows on hover */
+    color: #004d00; /* Darker green on hover */
+}
+
+/* Styling for the Header Icons Container */
+.header-icons {
+  display: flex; /* Align icons horizontally */
+  align-items: center; /* Vertically align icons */
+  justify-content: flex-end; /* Align icons to the right */
+  gap: 40px; /* Space between icons */
+  padding: 10px 20px; /* Padding around the container */
+  background-color:white; /* Light background color */
+}
+
+/* Styling for Each Icon */
+.header-icons i {
+  font-size: 22px; /* Icon size */
+  color: #00924c;; /* Icon color */
+  cursor: pointer; /* Add pointer cursor on hover */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="file"] { padding: 0.5rem; }
+
+.form-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.form-nav button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-next { background-color: #45a049; color: white; }
+.btn-back { background-color: #e5e7eb; }
+.btn-next:hover { background-color: #45a049; }
+.btn-back:hover { background-color: #d1d5db; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.step {
+  width: 20%;
+  height: 5px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  position: relative;
+}
+
+.step.active { background: #45a049; }
+
+.step::after {
+  content: attr(data-step);
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+.checkbox-wrapper span {
+  white-space: nowrap;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.btn-submit {
+  background-color: #45a049;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: block;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+/* Footer Section */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    min-height: 300px; /* Adjust according to your footer content height */
+
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 200px;
+    margin-left: -30px;
+    margin-right: 50px; /* Adjust this value for desired spacing */
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.3rem;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    color: #f9a826;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #2b9348;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f9a826;
+}
+
+.contact-info p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 2rem; /* Adds space above the footer-bottom */
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #0a4b1a;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  height: 600px; /* again, fixed height */
+}
+
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 1rem;
+}
+
