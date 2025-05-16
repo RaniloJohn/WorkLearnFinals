@@ -1,0 +1,790 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'League Spartan', 'Arial', sans-serif;
+}
+
+/* Apply League Spartan for titles and headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: larger;
+}
+
+/* Apply Garet for smaller texts (body text, paragraphs, etc.) */
+body, p, span, li, a {
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+}
+
+/* The navbar's base styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent initially */
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, top 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: transparent; /* Make text transparent for the start */
+}
+#logout-button {
+    background-color: transparent; /* Red background for logout */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* When the navbar becomes solid */
+.navbar.solid {
+    background-color: rgba(0, 0, 0, 1); /* Solid white */
+    color: black; /* Make text visible */
+}
+
+/* When the navbar is transparent */
+.navbar.transparent {
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+}
+
+
+/* Menu links visibility and spacing */
+#menu-links {
+    display: flex;
+    gap: 30px;
+}
+/* Remove underline from links and set the color to black */
+#menu-links a {
+    color: white;           /* Make the link text color black */
+    text-decoration: none;  /* Remove the underline */
+    transition: color 0.3s ease;  /* Optional: smooth transition for color change */
+}
+
+/* Optional: Add hover effect (if you want the color to change on hover) */
+#menu-links a:hover {
+    color: #333;  /* You can change this to any color you prefer on hover */
+    text-decoration: none;  /* Ensure no underline appears on hover */
+}
+
+/* Styling for the logo */
+#logo {
+    max-width: 400px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Optional: Adjusting opacity when navbar is transparent for the logo */
+.navbar.transparent #logo {
+    opacity: 1; /* Ensure the logo is visible when transparent */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.login, .register {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login {
+    background-color: white;
+    color: #2b9348;
+}
+
+.register {
+    background-color: #f9a826;
+    color: white;
+}
+
+.login:hover, .register:hover, .get-started:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+    height: auto;
+    max-width: auto;
+    max-height: auto;
+}
+
+/* Video Section Styling */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Full viewport height */
+    margin: 0; /* No margins */
+    padding: 0; /* Ensure there's no padding */
+    overflow: hidden; /* Prevent anything from overflowing */
+}
+
+.background-video {
+    position: absolute;
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 120%; /* Stretch to full width */
+    height: 100%; /* Stretch to full height */
+    object-fit: cover; /* Make sure the video covers the whole container */
+    z-index: -1; /* Place it behind content */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.video-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.video-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #f9a826;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #f0a500;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .video-content h1 {
+        font-size: 2rem;
+    }
+    .video-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+}
+
+.services h2 {
+    font-size: 2.5rem;  /* Increased font size for the heading */
+    margin-bottom: 1rem;
+}
+
+.services p {
+    font-size: 1.2rem;  /* Increased font size for the paragraph */
+    line-height: 1.6;  /* Adjust line-height for better readability */
+    margin-bottom: 1.5rem;
+}
+
+/* Service Cards */
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background-color: #e0f7fa; /* Light background color for the card */
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 16px; /* Rounds the corners of the card */
+    overflow: hidden; /* Ensures the image fits within rounded corners */
+    width: 250px; /* Set fixed width for the card */
+    height: 250px; /* Set fixed height for the card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.1); /* Expands the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a larger shadow on hover */
+    transform-origin: center;
+}
+
+/* Icon Images in Service Cards */
+.card img {
+    width: 100%; /* Makes the image take full width of the card */
+    height: auto;
+
+}
+
+/* Optional Image Zoom Effect on Hover */
+.card:hover img {
+    transform: scale(1.05); /* Slightly zooms the image */
+}
+
+
+/* Icon Images in Service Cards */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire card area */
+    border-radius: inherit; /* Matches the card's rounded corners */
+    transition: transform 0.3s ease;
+}
+
+/* Centered text styling */
+.card h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Resume Section */
+.resume {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.resume-content {
+    display: flex;
+    flex-direction: row; /* Ensures image and text are side-by-side */
+    align-items: center; /* Aligns items vertically center */
+    gap: 2rem; /* Adds space between image and text */
+    
+}
+
+/* Image styling */
+.resume-image {
+    width: 35%; /* Sets image to take half the width of the container */
+    height: auto;
+    border-radius: 7px;
+    flex-shrink: 0; /* Prevents image from shrinking if the window resizes */
+    margin-bottom: 0px;
+    margin-left: 900px;
+    margin-top: 110px;
+}
+
+/* Text content styling */
+.resume-text {
+    width: 50%; /* Sets text to take half the width of the container */
+    margin-left: 50px;
+    margin-top: -350px;
+    margin-bottom: 100px;
+    font-size: 40px;
+}
+
+.resume h2 {
+    font-size: 5rem; /* Adjust size to be more balanced */
+    margin-right: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem; /* Reduce the margin-bottom for a cleaner look */
+}
+
+.resume-content {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 20px; /* Adds spacing between image and text */
+}
+
+.resume-image {
+    max-width: 200%;  /* Ensure image doesn't overflow */
+    height: auto;     /* Maintain aspect ratio */
+    max-height: 400px; /* Limit the image height */
+}
+
+
+.get-started {
+    padding: 0.8rem 1.5rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 50px;
+    position:relative;
+    top: 20px;
+    left: 20px;
+ }
+
+.get-started:hover {
+    background-color: #45a049;;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 300px; /* Adjust this height to match the desired size */
+    overflow: hidden;
+}
+
+.hero-about {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-text .btn-primary {
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    justify-content: space-between; /* Ensure the content is spaced out */
+    align-items: center; /* Align the items vertically */
+    margin: 2rem;
+}
+
+.about-image {
+    width: 40%; /* Adjust image width to 50% of the container */
+  
+    margin-left: 930px; /* Reset any left margin */
+    border-radius: 8px; /* Rounded corners for the image */
+    object-fit: cover; /* Ensures the image fits inside its container without distortion */
+    margin-bottom: 50px;
+}
+
+.about-text {
+margin-top: -400px;
+padding-bottom: 50px;
+margin-bottom: -10px;
+}
+
+
+.get-started {
+    padding: 0.8rem 1.5rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.get-started:hover {
+    background-color: #45a049;
+}
+
+
+/* Mission Section Fixes */
+.mission-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+    flex-direction: row-reverse; /* Adjust as needed */
+}
+
+.mission-text {
+    font-size: 1.2rem;
+    margin: 0px -300px;
+    padding: 1rem;
+    text-align: justify;
+    margin-left: 1170px;
+    max-width: 3000px;
+    max-height: fit-content;
+    margin-top: -100px;
+    margin-bottom: -5px;
+}
+
+.mission-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -1000px;
+    margin-left: 1100px;
+    margin-right: 300px;
+    margin-bottom: 50px;
+    
+}
+
+.missionpic-image {
+    max-width: 50%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin: 20px 0; /* Adds space around the image */
+    margin-top: 80px;
+    margin-left: 350px;
+    margin-bottom: -220px;
+    
+}
+
+.main{
+    flex: 1;
+
+}
+
+/*Footer Section */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    min-height: 300px; /* Adjust according to your footer content height */
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 200px;
+    margin-left: -30px;
+    margin-right: 50px; /* Adjust this value for desired spacing */
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.3rem;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    color: #f9a826;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #2b9348;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f9a826;
+}
+
+.contact-info p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 2rem; /* Adds space above the footer-bottom */
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #0a4b1a;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Adjust width of the icon container */
+    height: 40px; /* Adjust height of the icon container */
+    background-color: #2b9348;  /* Background color for the icon */
+    border-radius: 50%;  /* Circular shape */
+    overflow: hidden;  /* Ensures image fits within circular container */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f9a826;  /* Change background color on hover */
+    transform: scale(1.1);  /* Slightly enlarge icon on hover */
+}
+
+.social-icons img {
+    width: 100%;  /* Makes the image fill the container */
+    height: 100%; /* Makes the image fill the container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.icon-img {
+    width: 20px; /* Adjust icon size */
+    height: 30px; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+}
+
+
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;  /* Start with no visibility */
+    }
+    100% {
+        opacity: 1;  /* End with full visibility */
+    }
+}
+
+/* Apply the animation to elements */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;  /* Fade in effect, 1.5s duration */
+}
+
+/* Optional: Add a slight delay to stagger animations */
+.fade-in-delay {
+    animation: fadeIn 1.5s ease-in-out 0.5s;  /* 0.5s delay before starting */
+}
+
+/* What We Do Section */
+.what-we-do-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Enables responsiveness */
+    gap: 2rem;
+    margin: 2rem;
+}
+
+/* Adjust the text */
+.what-we-do-text {
+    font-size: 1.2rem;
+    margin: 0px -50px;
+    padding: 1rem;
+    text-align: justify;
+    margin-left: 600px;
+    max-width: 700px;
+    max-height: fit-content;
+    margin-top: -230px;
+    margin-bottom: 50px;
+}
+
+/* Adjust the image */
+.what-we-do-image {
+    width: 200%;           /* Full width in its container */
+    max-width: 600px;      /* Limit max-width */
+    height: auto;          /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-top: -50px;
+   margin-left: 70px;
+}
+
+/* Interview Practice Section */
+.Interview-Practice-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Enables responsiveness */
+    gap: 2rem;
+    margin: 5rem;
+}
+
+/* Adjust the text */
+.Interview-Practice-text {
+    font-size: 1.2rem;
+    margin: 0px -50px;
+    padding: 1rem;
+    text-align: justify;
+    margin-left: 20px;
+    max-width: 700px;
+    max-height: fit-content;
+    margin-top: -230px;
+    margin-bottom: 110px;
+}
+
+/* Adjust the image */
+.Interview-Practice-image {
+    width: 100%;           /* Full width in its container */
+    max-width: 600px;      /* Limit max-width */
+    height: auto;          /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-top: -50px;
+   margin-right: 500px;
+    margin-left: 750px;
+}
+
+/* IQ Test Section */
+.IQ-Test-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Enables responsiveness */
+    gap: 2rem;
+    margin: 5rem;
+}
+
+/* Adjust the text */
+.IQ-Test-text {
+    font-size: 1.2rem;
+    margin: 0px -50px;
+    padding: 10rem;
+    text-align: justify;
+    margin-left: 655px;
+    max-width: 700px;
+    max-height: fit-content;
+    margin-top: -400px;
+    margin-bottom: -100px;
+}
+
+/* Adjust the image */
+.IQ-Test-image {
+    width: 100%;           /* Full width in its container */
+    max-width: 600px;      /* Limit max-width */
+    height: auto;          /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-top: -50px;
+   margin-right: 500px;
+    margin-left: 30px;
+}
+
+/* Resume Builder Section */
+.Resume-Builder-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Enables responsiveness */
+    gap: 2rem;
+    margin: 2rem;
+}
+
+/* Adjust the text */
+.Resume-Builder-text {
+    font-size: 1.2rem;
+    margin: 0px -50px;
+    padding: 10rem;
+    text-align: justify;
+    margin-left: -70px;
+    max-width: 800px;
+    max-height: fit-content;
+    margin-top: -450px;
+    margin-bottom: -100px;
+}
+
+/* Adjust the image */
+.Resume-Builder-image {
+    width: 200%;           /* Full width in its container */
+    max-width: 700px;      /* Limit max-width */
+    height: auto;          /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-top: -1px;
+    margin-bottom: -40px;
+   margin-right: 150px;
+    margin-left: 700px;
+    margin-top: 20px;
+}
+
