@@ -1,36 +1,27 @@
-document.getElementById('login-form').addEventListener('submit', function (event) {
-    event.preventDefault(); 
+document.getElementById('login-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
 
-   
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    
-    const accounts = [
-        { email: "delosangeles.ranilojohn@ue.edu.ph", password: "12345", redirectTo: "profile.html" },  
-        { email: "WorklearnAdmin@visa.com", password: "Password123", redirectTo: "Homepagecompany.html" } 
-        
-    ];
-
-    
-    let isValidAccount = false;
-    let redirectPage = ""; 
-
-   
-    for (let i = 0; i < accounts.length; i++) {
-        if (email === accounts[i].email && password === accounts[i].password) {
-            isValidAccount = true;
-            redirectPage = accounts[i].redirectTo;  
-            break;  
+    try {
+        const resp = await fetch('http://localhost:3000/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+        const data = await resp.json();
+        if (resp.ok && data.ok) {
+            window.location.href = data.redirect;
+        } else {
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = data.message || 'Login failed';
+            errorMessage.style.display = 'block';
         }
-    }
-
-    
-    if (isValidAccount) {
-        window.location.href = redirectPage; 
-    } else {
-        
+    } catch (err) {
+        console.error(err);
         const errorMessage = document.getElementById('error-message');
-        errorMessage.style.display = "block"; 
+        errorMessage.textContent = 'Server error';
+        errorMessage.style.display = 'block';
     }
 });
