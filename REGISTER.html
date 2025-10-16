@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Garet:wght@400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="registercss.css">
+    <script src="register.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -32,12 +33,13 @@
             <div class="login-form">
                 <img src="images/WL (1).png" alt="register-logo"> <!-- Company Logo -->
                 <h2>Create Your Account</h2>
-                <form>
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="password" placeholder="Password" required>
-                    <input type="password" placeholder="Confirm Password" required>
+                <form id="register-form">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
                     <button type="submit">Register</button>
+                    <p id="error-message" style="color:red; display:none;"></p>
                 </form>
                 
                 <div class="already-account">
